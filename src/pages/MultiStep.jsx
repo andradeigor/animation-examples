@@ -8,12 +8,13 @@ const Home = () => {
     "inactive",
   ]);
   const [active, setActive] = useState(0);
-
+  console.log(active, status);
   const handleContinue = () => {
     if (active + 1 >= status.length) {
       const newStatus = [...status];
       newStatus[3] = "complete";
       setStatus(newStatus);
+      setActive(4);
       return;
     }
     const newStatus = [...status];
@@ -28,12 +29,18 @@ const Home = () => {
     if (active == 0) {
       return;
     }
-    const newStatus = [...status];
-    newStatus[active - 1] = "active";
-    for (let index = status.length - 1; index >= active; index--) {
-      newStatus[index] = "inactive";
+    const newActive = active - 1;
+    const newStatus = [];
+    for (let index = 0; index < status.length; index++) {
+      if (index > newActive) {
+        newStatus.push("inactive");
+      } else if (index == newActive) {
+        newStatus.push("active");
+      } else {
+        newStatus.push("complete");
+      }
     }
-    setActive(active - 1);
+    setActive(newActive);
     setStatus(newStatus);
   };
 
