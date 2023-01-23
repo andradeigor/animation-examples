@@ -1,28 +1,39 @@
 import { CheckIcon } from "./CheckBoxIcon/CheckBoxIcon";
-
+import { motion } from "framer-motion";
 const CheckBox = ({ status, number }) => {
+  const variants = {
+    inactive: {
+      backgroundColor: "#FFF",
+      borderColor: "#E5E7EB",
+      color: "#9CA3AF",
+    },
+    active: {
+      backgroundColor: "#FFF",
+      borderColor: "#0082F6",
+      color: "#0082F6",
+    },
+    complete: {
+      backgroundColor: "#0082F6",
+      borderColor: "#0082F6",
+      color: "#0082F6",
+    },
+  };
   return (
-    <div
-      className={` flex h-12 w-12 items-center justify-center rounded-full border-2 ${
-        status == "complete"
-          ? "border-blue-500 bg-blue-500"
-          : status == "active"
-          ? "border-blue-500 bg-white text-blue-500"
-          : "border-gray-200 bg-white text-gray-400"
-      }`}
+    <motion.div
+      initial={false}
+      variants={variants}
+      animate={status}
+      transition={{ duration: 1 }}
+      className={` flex h-12 w-12 items-center justify-center rounded-full border-2 `}
     >
-      <h1
-        className={`${
-          status == "active" ? "text-blue-500" : "text-gray-400"
-        } text-xl font-medium`}
-      >
+      <motion.h1 className={` text-xl font-medium`}>
         {status == "complete" ? (
           <CheckIcon className="h-8 w-8 stroke-[2.4] font-bold text-white" />
         ) : (
           number
         )}
-      </h1>
-    </div>
+      </motion.h1>
+    </motion.div>
   );
 };
 

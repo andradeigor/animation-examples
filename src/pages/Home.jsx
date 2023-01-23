@@ -39,8 +39,8 @@ const Home = () => {
 
   return (
     <main className="flex h-screen w-screen items-center justify-center bg-zinc-500">
-      <div className="flex h-2/5 w-1/3 flex-col rounded-3xl bg-white p-5 shadow-md">
-        <div className="flex h-1/6 w-full items-center justify-evenly">
+      <div className="flex h-2/5 w-[30%] flex-col rounded-3xl bg-white p-5 px-10 shadow-md">
+        <div className="flex h-1/6 w-full items-center justify-between">
           {status.map((statu, index) => (
             <CheckBox key={index} status={statu} number={index + 1} />
           ))}
@@ -63,7 +63,7 @@ const Home = () => {
           <div>
             <button
               onClick={handleContinue}
-              className="h-10 w-32 rounded-2xl bg-blue-500 font-Inter text-xl font-semibold text-white transition-all duration-300 ease-out hover:scale-105"
+              className="h-10 w-32 rounded-3xl bg-blue-500 font-Inter text-xl font-semibold text-white transition-all duration-300 ease-out hover:scale-105"
             >
               Continue
             </button>
