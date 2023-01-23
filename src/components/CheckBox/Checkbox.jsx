@@ -23,12 +23,12 @@ const CheckBox = ({ status, number }) => {
       initial={false}
       variants={variants}
       animate={status}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.2 }}
       className={` flex h-12 w-12 items-center justify-center rounded-full border-2 `}
     >
       <motion.h1 className={` text-xl font-medium`}>
         {status == "complete" ? (
-          <CheckIcon className="h-8 w-8 stroke-[2.4] font-bold text-white" />
+          <CheckIcon className="h-6 w-6 stroke-[3] font-bold text-white" />
         ) : (
           number
         )}
