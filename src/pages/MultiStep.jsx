@@ -1,6 +1,6 @@
 import CheckBox from "../components/CheckBox/Checkbox";
 import { useState } from "react";
-const Home = () => {
+const MultiStep = () => {
   const [status, setStatus] = useState([
     "active",
     "inactive",
@@ -81,4 +81,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MultiStep;
