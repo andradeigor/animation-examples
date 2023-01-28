@@ -52,7 +52,7 @@ const Home = () => {
             </div>
           </div>
         </Link>
-        <Link to="/carrossel">
+        <Link to="/carousel">
           <div className="h-80 w-60 cursor-pointer rounded-xl bg-white shadow-md">
             <div className="h-2/3 w-full overflow-hidden ">
               <img
@@ -61,7 +61,7 @@ const Home = () => {
               />
             </div>
             <div className="flex h-1/3 w-full items-center justify-center px-2">
-              <h1 className=" text-3xl text-zinc-600">Carrossel</h1>
+              <h1 className=" text-3xl text-zinc-600">Carousel</h1>
             </div>
           </div>
         </Link>

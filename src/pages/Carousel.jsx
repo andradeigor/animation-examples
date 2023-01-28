@@ -8,7 +8,7 @@ import { ArrowSmallRightIcon } from "../components/RightArrowIcon/RightArrowIcon
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Carrossel = () => {
+const Carousel = () => {
   const [Images, setImages] = useState([
     Image1Path,
     Image2Path,
@@ -86,4 +86,4 @@ const Carrossel = () => {
   );
 };
 
-export default Carrossel;
+export default Carousel;
