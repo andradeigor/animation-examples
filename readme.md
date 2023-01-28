@@ -1,4 +1,4 @@
-# PunPun's Portfolio
+# Animation Examples
 
 O repositório foi feito para armazenar exemplos de animações que aprendi seguindo uns tutoriais na internet e alguns lendo a documentação/experimentando.
 
